@@ -1,0 +1,66 @@
+<style>
+	.box-img{
+		width: 360px;
+		height: 230px;
+		background: #000;
+		float: left;
+		margin: 20px;
+		position: relative;
+	}
+	.next{
+		text-align: center;
+		clear:both ;
+		position: relative;
+		display: block;
+		padding-top:25px; 
+	}
+	.btn{
+		color:#111;
+		border: 1px solid #eee;
+		padding: 10px;
+		margin: 20px 10px;
+	}
+	.btn:hover{
+		background: #ccc;
+	}
+</style>
+<div class="my-sider">
+		<ul>
+			<li style="background-image: url(img/banenr1.jpg);height: 600px;"></li>
+			<li style="background-image: url(img/banenr2.jpg);height: 600px;"></li>
+			<li style="background-image: url(img/banenr3.jpg);height: 600px;"></li>
+			<li style="background-image: url(img/banenr3.jpg);height: 600px;"></li>
+			<li style="background-image: url(img/banenr3.jpg);height: 600px;"></li>
+		</ul>
+</div>
+<section class="contrainer" style="min-height:860px;">
+<h1 style="line-height: 30px;border-bottom: 2px solid #000"><span style="line-height: 36px;border-bottom: 2px solid red;display: inline-block;">公会慈善</span></h1>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<div class="box-img"><img src="img/公会慈善_19.gif" alt=""></div>
+<br>
+<div class="next">
+	<a href="" class="btn">上一页</a>
+	<a href="" class="btn">下一页</a>
+</div>
+<br>
+<br>
+</section>
+<script>
+	if(window.chrome) {
+		$('.my-sider li').css('background-size', '100% 100%');
+	}
+	$('.my-sider').unslider({
+		fluid: true,
+		dots: true,
+		infinite: true,
+		arrows: false,
+		autoplay: true
+	});
+</script>

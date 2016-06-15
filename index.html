@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>领金</title>
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="js/unslider-master/dist/css/unslider.css">
+	<link rel="stylesheet" href="js/unslider-master/dist/css/unslider-dots.css">
+</head>
+<body>
+	<header>
+		<nav class="top">
+			<div class="contrainer">
+				<p class="desc">你好！欢迎来到领今创业网赚平台</p>
+			</div>
+		</nav>
+		<nav class="nav">
+			<div class="contrainer">
+				<img class="logo" src="img/logo.png" alt="">
+				<ul>
+					<li class="active"><a href="/lj" data-pjax-page>领金首页</a></li>
+					<li><a href="demo.html" data-pjax-page>工作介绍</a></li>
+					<li><a href="renshijiedai.html" data-pjax-page>我的账户</a></li>
+					<li><a href="gongoyichisan.html" data-pjax-page>公益慈善</a></li>
+					<li><a href="zhiyepeixunyuan.html" data-pjax-page>关于我们</a></li>
+				</ul>
+			</div>
+		</nav>	
+	</header>
+	<section id="page" style="margin-top: 10px">
+		<div class="my-sider">
+			<ul>
+				<li style="background-image: url(img/banenr1.jpg);height: 600px;"></li>
+				<li style="background-image: url(img/banenr2.jpg);height: 600px;"></li>
+				<li style="background-image: url(img/banenr3.jpg);height: 600px;"></li>
+				<li style="background-image: url(img/banenr4.jpg);height: 600px;"></li>
+				<li style="background-image: url(img/banenr5.jpg);height: 600px;"></li>
+			</ul>
+		</div>
+		<br>
+		<section class="contrainer">
+			<div class="side-nav">
+				<div class="side-header"><span>工作内容</span></div>
+				<ul>
+					<a href="shoujijianzhiyuan.html" data-pjax-content><li class="active">手机兼职员</li></a>
+					<a href="daziyuan.html" data-pjax-content><li>打字员</li></a>
+					<a href="youxipingceyuan.html" data-pjax-content><li>游戏评测员</li></a>
+					<a href="psmeigong.html" data-pjax-content><li>PS美工</li></a>
+					<a href="renshijiedai.html" data-pjax-content><li>人事接待</li></a>
+					<a href="zhiyepeixunyuan.html" data-pjax-content><li>职员培训师</li></a>
+					<a href="zhucedan.html" data-pjax-content><li>注册单</li></a>
+					<a href="lol.html" data-pjax-content><li>英雄联盟</li></a>
+					<a href="guanlizhiwei.html" data-pjax-content><li>管理职位</li></a>
+					<a href="pinglunyuan.html" data-pjax-content><li>评论员</li></a>
+					<a href="jianhuangshi.html" data-pjax-content><li>鉴黄师</li></a>
+	
+				</ul>
+			</div>
+			<div class="content"  id="content">
+				<img src="img/培训师.jpg" alt="">
+				<div class="describe">
+<h1>招聘工作</h1>
+<pre>
+适用于18-60岁，待业人员或时间充裕有责任心的全职宝妈以及宝爸
+
+工作简单并且时间自由，可兼职，不收取培训费、杂费
+         
+另：残联人士优先录用，薪资优厚！
+          
+（网赚教育免费培训工作技能）
+
+招聘职位：6小时月薪可达下限，工作8小时可达上限 
+                  
+薪水无任务
+</pre>
+<h1 style="color:red">平台福利:</h1>
+<pre>
+1：新入职会员可做6个高佣金注册单共计146元，只可做一次
+
+2：挂机也兑换现金，10点贡献=1元，每天最高2.4元
+
+3：工作可随时更换，可身兼多职
+
+4：残疾人出示身份证，残疾证可享受佣金多10%
+
+5：连续登陆5天官方论坛可领取20元佣金
+
+6：推荐朋友来平台工作可获得40元佣金	
+</pre>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<footer class="footer">
+		<div class="bottom">
+			<ul>
+				<li class="item">手机兼职员</li>
+				<li>|</li>
+				<li class="item">打字员</li>
+				<li>|</li>
+				<li class="item">游戏评测员</li>
+				<li>|</li>
+				<li class="item">PS美工</li>
+				<li>|</li>
+				<li class="item">人事接待</li>
+			</ul>
+			<p>温馨提醒：以上职位一经录用待遇优厚，工作时间自由，欢迎有责任行的人员前来咨询</p>
+		</div>
+	</footer>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.pjax.js"></script>
+<script src="js/unslider-master/dist/js/unslider-min.js"></script>
+<script>
+	$(document).pjax('[data-pjax-content]','#content',{
+		scrollTo:600,
+		replace:true
+	})
+	$(document).pjax('[data-pjax-page]','#page');
+
+	$(document).pjax('[data-pjax-page-sider]','#sider');
+
+	if ($.support.pjax) {
+	  $(document).on('click', 'a[data-pjax-content]', function(event) {
+	  	var _this=$(this);
+	  	var li=_this.children("li");
+	  	var nextall=_this.siblings().children("li");
+	  	nextall.removeClass("active");
+	  	$(li).addClass("active");
+	  })
+	  $(document).on('click', 'a[data-pjax-page]', function(event) {
+	  	var _this=$(this);
+	  	var li=_this.parent("li");
+	  	var nextall=li.siblings();
+	  	nextall.removeClass("active");
+	  	$(li).addClass("active");
+	  	console.log(event)
+	  })
+	  $(document).on('click', 'a[data-pjax-page-sider]', function(event) {
+	  	var _this=$(this);
+	  	var li=_this.parent("li");
+	  	var nextall=li.siblings();
+	  	nextall.removeClass("active");
+	  	$(li).addClass("active");
+	  	console.log(event)
+	  })
+	}
+
+
+	if(window.chrome) {
+		$('.my-sider li').css('background-size', '100% 100%');
+	}
+
+	$('.my-sider').unslider({
+		fluid: true,
+		dots: true,
+		infinite: true,
+		arrows: false,
+		autoplay: true
+	});
+</script>
+</html>
